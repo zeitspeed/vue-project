@@ -1,5 +1,5 @@
 <template>
-  <div class="custom-page">
+  <div>
     <mainv></mainv>
   </div>
 </template>
@@ -11,8 +11,4 @@ export default {
 };
 </script>
 <style>
-.custom-page {
-  height: 100vh;
-}
-
 </style>

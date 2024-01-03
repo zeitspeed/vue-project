@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-container>
+    <el-container class="custom-page">
       <Aside></Aside>
       <nuxt/>
     </el-container>
@@ -12,7 +12,11 @@ import Aside from "../components/aside.vue";
 export default {
   components: { Aside }
 };
+
 </script>
 
 <style>
+.custom-page {
+  height: 100vh;
+}
 </style>

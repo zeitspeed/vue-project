@@ -3,10 +3,8 @@
     <el-aside
       type="flex"
       width="300px"
-      style="background-color: rgb(255, 255, 233)"
-      line-height="60px"
+      style="background-color: rgb(241, 237, 235)"
       align="middle"
-      box-shadow="0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04)" 
     >
       <div class="logo">
         <nuxt-link to="/">
@@ -16,19 +14,22 @@
           />
         </nuxt-link>
       </div>
-      <el-row type="flex" class="navs" id="hitokoto">
-        <a href="#" id="hitokoto_text"></a>
+      <el-row type="flex" class="yiyan" id="hitokoto">
+        <nuxt-link to="#" id="hitokoto_text"></nuxt-link>
       </el-row>
-      <el-row type="flex" class="navs" >
-        <a href='' display="block">游记</a>
+      <el-row type="flex" class="navs"  >
+        <nuxt-link to='/post' display="block">游记</nuxt-link>
       </el-row>
+      <div class="zhanwei"></div>
     </el-aside>
   </el-container>
 </template>
 
 <script>
 import fetch from "node-fetch";
-export default {};
+export default {
+
+};
 fetch("https://v1.hitokoto.cn")
   .then((response) => response.json())
   .then((data) => {
@@ -45,38 +46,44 @@ fetch("https://v1.hitokoto.cn")
   width: auto;
   // padding-top:10px;
 }
-// 文字，一言API
-.navs{      
+//一言API
+.yiyan{
             display:block;
             Padding: 6px;
             margin: 0 20px;
-            margin-top: 100px;
-            border-bottom-style :solid;
             flex:1;
-            height:100px;
-            // justify-content: center;//实现水平居中
-            // align-items: middle;//实现垂直居中
-            // border-style: solid;
-            // line-height:100px;
-            // flex-direction: row;      /* 主轴x */
-            // justify-content: center; 
+            height:12vh;
+            border-bottom-style :solid;
             a{
-                height:100px;
-                padding:0 0px;
+                height:12vh;
                 box-sizing: border-box;
                 color:#000000;
                 font-size: large;
                 text-decoration:none;//取消下划线
                 font-style: italic;
-                &:hover,&:focus, &:active {
-                    border-bottom:5px #85ebeb solid;
+              }
+}
+// 文字
+.navs{      
+            display:block;
+            flex:1;
+            height:15vh;
+            line-height:15vh;
+            &:hover,&:focus, &:active {
                     color:#000000;
+                    background:#e3c2c2;
+                    color:#fff!important;
                 }
-            }
-
-            /deep/ .nuxt-link-exact-active{
-                background:#85ebeb;
-                color:#fff!important;
+            a{
+                height:15vh;
+                box-sizing: border-box;
+                color:#000000;
+                font-size: xx-large;
+                text-decoration:none;//取消下划线
             }
         }
+//占位块
+.zhanwei{
+    height:30vh;
+}
 </style>
