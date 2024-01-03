@@ -65,15 +65,17 @@ export default {
       });
     },
   },
-};
-fetch("https://v1.hitokoto.cn")
-  .then((response) => response.json())
-  .then((data) => {
-    const hitokoto = document.querySelector("#hitokoto_text");
-    hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
-    hitokoto.innerText = data.hitokoto;
-  })
-  .catch(console.error);
+  mounted(){
+    fetch("https://v1.hitokoto.cn")
+    .then((response) => response.json())
+    .then((data) => {
+      const hitokoto = document.querySelector("#hitokoto_text");
+      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
+      hitokoto.innerText = data.hitokoto;
+    })
+    .catch(console.error);
+  }
+}
 </script>
 
 <style scoped lang="less">
@@ -85,8 +87,8 @@ fetch("https://v1.hitokoto.cn")
 //一言API
 .yiyan{
             display:block;
-            Padding: 6px;
-            margin: 0 20px;
+            Padding: 26px;
+            // margin: 0 20px;
             flex:1;
             height:12vh;
             border-bottom-style :solid;
@@ -108,7 +110,6 @@ fetch("https://v1.hitokoto.cn")
             &:hover,&:focus, &:active {
                     color:#000000;
                     background:#e3c2c2;
-                    color:#fff!important;
                 }
             a{
                 height:15vh;
@@ -120,7 +121,7 @@ fetch("https://v1.hitokoto.cn")
         }
 //占位块
 .zhanwei{
-    height:30vh;
+    height:32vh;
 }
 
 .message {
@@ -134,16 +135,23 @@ fetch("https://v1.hitokoto.cn")
   }
   
 .el-dropdown-link {
-    margin-left: 20px;
-
+    border-top-style :solid;
+    display:block;
+    flex:1;
+    line-height:15vh;
+    height: 15vh;
     &:hover {
       img {
         border-color: #409eff;
       }
     }
-
     a {
       display: block;
+      height:15vh;
+      box-sizing: border-box;
+      color:#000000;
+      font-size: xx-large;
+      text-decoration:none;//取消下划线
     }
 
     img {
@@ -155,13 +163,24 @@ fetch("https://v1.hitokoto.cn")
     }
   }
   .account-link {
-    font-size: 14px;
-    margin-left: 10px;
-    color: #666;
-
-    &:hover {
-      color: #409eff;
-      text-decoration: underline;
+    border-top-style :solid;
+    display:block;
+    flex:1;
+    line-height:15vh;
+    height: 15vh;
+    font-size:xx-large;
+    color: #000000;
+    text-decoration:none;//取消下划线
+    a {
+      display: block;
+      height:15vh;
+      box-sizing: border-box;
+      color:#000000;
+      font-size: xx-large;
+    }
+    &:hover,&:focus, &:active {
+                    color:#000000;
+                    background:#e3c2c2;
     }
   }
 </style>
