@@ -46,8 +46,8 @@ export default {
   <style scoped lang="less">
 .container {
   background: url(http://210.21.98.31:6004/assets/images/th03.jfif) center 0;
-  height: 700px;
-  min-width: 1000px;
+  width: 100%;
+  height: 100vh;
 
   .main {
     width: 1000px;

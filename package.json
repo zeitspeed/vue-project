@@ -17,6 +17,7 @@
     "node-fetch": "^2.7.0",
     "nuxt": "^2.15.8",
     "vue": "^2.7.10",
+    "vue-amap": "^0.5.10",
     "vue-server-renderer": "^2.7.10",
     "vue-template-compiler": "^2.7.10",
     "vuex-persistedstate": "^4.1.0"

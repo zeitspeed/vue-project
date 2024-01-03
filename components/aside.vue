@@ -87,13 +87,13 @@ export default {
 //一言API
 .yiyan{
             display:block;
-            Padding: 26px;
+            Padding: 20px;
             // margin: 0 20px;
             flex:1;
-            height:12vh;
+            height:14vh;
             border-bottom-style :solid;
             a{
-                height:12vh;
+                height:14vh;
                 box-sizing: border-box;
                 color:#000000;
                 font-size: large;
@@ -121,7 +121,7 @@ export default {
         }
 //占位块
 .zhanwei{
-    height:32vh;
+    height:30vh;
 }
 
 .message {

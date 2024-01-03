@@ -28,7 +28,8 @@ export default{
     {
       src:'@/plugins/localStorage', ssr: false
     },
-    '@/plugins/axios'
+    '@/plugins/axios',
+    '@/plugins/vue-map'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
