@@ -20,9 +20,9 @@
         <nuxt-link to='/post' display="block">游记</nuxt-link>
       </el-row>
       <div class="zhanwei"></div>
-      <el-row type="flex" align="middle">
+      <el-row type="flex" align="middle" >
         <!-- 如果用户存在则展示用户信息，用户数据来自store -->
-        <el-dropdown v-if="$store.state.user.userInfo.token">
+        <el-dropdown v-if="$store.state.user.userInfo.token" class="account-link">
           <el-row type="flex" align="middle" class="el-dropdown-link">
             <nuxt-link to="#">
               <img
@@ -33,11 +33,10 @@
               />
               {{ $store.state.user.userInfo.user.nickname }}
             </nuxt-link>
-            <i class="el-icon-caret-bottom el-icon--right"></i>
           </el-row>
           <el-dropdown-menu slot="dropdown">
             <el-dropdown-item>
-              <nuxt-link to="#">个人中心</nuxt-link>
+              <nuxt-link to="#" style="text-decoration:none">个人中心</nuxt-link>
             </el-dropdown-item>
             <el-dropdown-item>
               <div @click="handleLogout">退出</div>
@@ -98,7 +97,7 @@ export default {
                 color:#000000;
                 font-size: large;
                 text-decoration:none;//取消下划线
-                font-style: italic;
+                // font-style: italic;
               }
 }
 // 文字

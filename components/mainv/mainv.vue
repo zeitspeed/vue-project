@@ -69,7 +69,7 @@ export default {
           clickable: true
         },
         {
-          position: [122.59996, 32.197646],
+          position: [182.59996, 32.197646],
           events: {
             click: () => {
               this.$router.push({path: '/single/250'});
