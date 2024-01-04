@@ -19,6 +19,9 @@
       <el-row type="flex" class="account-link"  >
         <nuxt-link to='/hotel'>酒店预定</nuxt-link>
       </el-row>
+      <el-row type="flex" class="account-link"  >
+        <nuxt-link to='/air/flights'>机票预定</nuxt-link>
+      </el-row>
       <div class="zhanwei"></div>
       <el-row type="flex" align="middle" >
         <!-- 如果用户存在则展示用户信息，用户数据来自store -->
@@ -90,7 +93,7 @@ export default {
             // margin: 0 20px;
             flex:1;
             height:14vh;
-            border-bottom-style :solid;
+            // border-bottom-style :solid;
             a{
                 height:14vh;
                 box-sizing: border-box;
@@ -120,7 +123,7 @@ export default {
         }
 //占位块
 .zhanwei{
-    height:30vh;
+    height:15vh;
 }
 
 .message {
