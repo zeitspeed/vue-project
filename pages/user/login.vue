@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <!-- 主要内容 -->
+    <div id="imgg"></div>
     <el-row type="flex" justify="center" align="middle" class="main">
       <div class="form-wrapper">
         <!-- 表单头部tab -->
@@ -48,7 +49,13 @@ export default {
   background: url(http://210.21.98.31:6004/assets/images/th03.jfif) center 0;
   width: 100%;
   height: 100vh;
-
+  #imgg {
+  width: 100%;
+  height: 100vh;
+  background: url("../../static/img/login.png") center center no-repeat;
+  background-size: 100% 100%;
+  position:fixed;//绝对定位
+}
   .main {
     width: 1000px;
     height: 100%;
