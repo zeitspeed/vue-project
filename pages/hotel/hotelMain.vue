@@ -1,7 +1,11 @@
 <template>
   <div class="hotel-booking">
+   
     <h2>预订酒店</h2>
-    <div class="booking-form">
+    
+
+    <div class="">
+      
       <label for="guest-name">入住人姓名:</label>
       <input id="guest-name" type="text" v-model="guestName" />
 
@@ -23,6 +27,7 @@
 
       <button @click="bookHotel" class="book-button">预订</button>
     </div>
+    
     <div v-if="bookingConfirmation" class="confirmation">
       <p>预订成功！</p>
       <p>入住人：{{ guestName }}</p>
@@ -32,6 +37,7 @@
       <p>入住人数：{{ guests }}</p>
     </div>
   </div>
+ 
 </template>
 
 <script>
@@ -44,6 +50,8 @@ export default {
       roomType: 'single',
       guests: 1,
       bookingConfirmation: false,
+      
+     
     };
   },
   methods: {
@@ -58,42 +66,24 @@ export default {
 </script>
 
 <style scoped>
-.hotel-booking {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.booking-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.booking-form label {
-  font-weight: bold;
-}
-
-.booking-form input[type="text"],
-.booking-form input[type="date"],
-.booking-form input[type="number"],
-.booking-form select {
-  height: 36px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
 .book-button {
   height: 36px;
   padding: 0 10px;
   background-color: blue;
-  color: white;
+  color: rgb(236, 245, 248);
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.confirmation {
-  margin-top: 20px;
+.hotel-booking {
+  max-width: 800px;
+ height: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: left;
+  
+  
 }
+
 </style>

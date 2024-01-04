@@ -17,7 +17,7 @@
         <nuxt-link to="#" id="hitokoto_text"></nuxt-link>
       </el-row>
       <el-row type="flex" class="account-link"  >
-        <nuxt-link to='/post'>游记</nuxt-link>
+        <nuxt-link to='/hotel'>酒店</nuxt-link>
       </el-row>
       <div class="zhanwei"></div>
       <el-row type="flex" align="middle" >
