@@ -16,8 +16,8 @@
       <el-row type="flex" class="yiyan" id="hitokoto">
         <nuxt-link to="#" id="hitokoto_text"></nuxt-link>
       </el-row>
-      <el-row type="flex" class="navs"  >
-        <nuxt-link to='/post' display="block">游记</nuxt-link>
+      <el-row type="flex" class="account-link"  >
+        <nuxt-link to='/post'>游记</nuxt-link>
       </el-row>
       <div class="zhanwei"></div>
       <el-row type="flex" align="middle" >
@@ -176,6 +176,7 @@ export default {
       box-sizing: border-box;
       color:#000000;
       font-size: xx-large;
+      text-decoration:none;//取消下划线
     }
     &:hover,&:focus, &:active {
                     color:#000000;
